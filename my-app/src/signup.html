@@ -9,7 +9,6 @@
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    
 
     <script
       type="module"
@@ -22,160 +21,239 @@
     <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script type="module" src="./js/name.js"></script>
-    <script type="module" src="./js/auth/signup.js"></script>
-
-    <meta name="theme-color" content="#31d53d" />
-
-      <style>
-     #loginbody {
-      background-image: url('assets/imgs/colorfulbg.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-
-      </style>
-    
-  </head>
-  <body id="loginbody">
-
- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Awesome Capacitor App</title>
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    
-
-    <script
-      type="module"
-      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
-    ></script>
-    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script type="module" src="./js/name.js"></script>
     <script type="module" src="./js/auth/signup.js"></script>
 
     <meta name="theme-color" content="#31d53d" />
 
-      <style>
-     #loginbody {
-      background-image: url('assets/imgs/colorfulbg.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-
-    
-
-      </style>
-    
+    <style>
+      #loginbody {
+        background-image: url("assets/imgs/colorfulbg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
   </head>
   <body id="loginbody">
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Awesome Capacitor App</title>
+        <meta
+          name="viewport"
+          content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
 
-          <div class="row mx-3 mt-3">
-            <a class="nav-link d-flex align-items-center" href="login.html" id="viewlink">
-        <i class="bi bi-arrow-left" id="backsign"></i>        
-      </a>
+        <script
+          type="module"
+          src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+        ></script>
+        <script
+          nomodule
+          src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+        ></script>
+        <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+        <link rel="manifest" href="./manifest.json" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <script type="module" src="./js/name.js"></script>
+        <script type="module" src="./js/auth/signup.js"></script>
+
+        <meta name="theme-color" content="#31d53d" />
+
+        <style>
+          #loginbody {
+            background-image: url("assets/imgs/colorfulbg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+          }
+        </style>
+      </head>
+      <body id="loginbody">
+        <div class="row mx-3 mt-3">
+          <a
+            class="nav-link d-flex align-items-center"
+            href="login.html"
+            id="viewlink"
+          >
+            <i class="bi bi-arrow-left" id="backsign"></i>
+          </a>
+        </div>
+
+        <div class="container my-1">
+          <img
+            src="assets/imgs/9.png"
+            class="mx-auto d-block"
+            width="100px"
+            height="100px"
+          />
+          <!-- Centering the image -->
+          <h1 class="text-white text-center">Create New Account</h1>
+          <p class="text-white text-center">
+            Already registered?
+            <a
+              style="text-decoration: none"
+              class="link-opacity-100"
+              href="login.html"
+              >Log in here</a
+            >
+          </p>
+        </div>
+        <br />
+
+        <form id="form_signup">
+          <div class="mb-2" id="formsign">
+            <label for="exampleFormControlInput1" class="form-label text-white">
+              <i class="bi bi-person"></i> First Name</label
+            >
+            <input
+              type="text"
+              class="form-control bg-white text-dark"
+              name="first_name"
+              id="first_name"
+              placeholder="First Name"
+              required
+            />
           </div>
-            
-    <div class="container my-1">
-      <img src="assets/imgs/9.png" class="mx-auto d-block" width="100px" height="100px" > <!-- Centering the image -->
-       <h1 class="text-white text-center">Create New Account</h1>
-      <p class="text-white text-center">Already registered? <a style="text-decoration: none;" class="link-opacity-100" href="login.html">Log in here</a></p>
-    </div>
-     <br>
 
-    <form id="form_signup">
-      <div class="mb-2" id="formsign">
-        <label for="exampleFormControlInput1" class="form-label text-white"> <i class="bi bi-person"></i> First Name</label>
-        <input type="text" class="form-control bg-white text-dark" name="first_name" id="first_name" placeholder="First Name" required>
-      </div>
+          <div class="mb-2" id="formsign">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              ><i class="bi bi-person"></i> Last Name</label
+            >
+            <input
+              type="text"
+              class="form-control bg-white text-dark"
+              name="last_name"
+              id="last_name"
+              placeholder="Last Name"
+              required
+            />
+          </div>
 
-      <div class="mb-2" id="formsign">
-        <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-person"></i> Last Name</label>
-        <input type="text" class="form-control bg-white text-dark" name="last_name" id="last_name" placeholder="Last Name" required>
-      </div>
+          <div class="mb-2" id="formsign">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              ><i class="bi bi-telephone"></i> Contact Number</label
+            >
+            <input
+              type="number"
+              class="form-control bg-white text-dark"
+              name="contact_number"
+              id="contact_number"
+              placeholder="Contact Number"
+              required
+            />
+          </div>
 
-      <div class="mb-2" id="formsign">
-        <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-buildings"></i> College</label>
-        <input type="text" class="form-control bg-white text-dark" name="college_name" id="college_name" placeholder="College" required>
-      </div>
+          <div class="mb-2" id="formsign">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              ><i class="bi bi-facebook"></i> Facebook Link</label
+            >
+            <input
+              type="text"
+              class="form-control bg-white text-dark"
+              name="fb_link"
+              id="fb_link"
+              placeholder="Facebook Link"
+              required
+            />
+          </div>
 
-      <div class="mb-2" id="formsign">
-        <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-building"></i> Program</label>
-        <input type="text" class="form-control bg-white text-gray" name="program_name" id="program_name" placeholder="Program" required>
-      </div>
+          <div class="mb-2" id="formsign">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              ><i class="bi bi-envelope-at"></i> Email Address</label
+            >
+            <input
+              type="email"
+              class="form-control bg-white text-dark"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
 
-      <div class="mb-2" id="formsign">
-        <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-telephone"></i> Contact Number</label>
-        <input type="number" class="form-control bg-white text-dark" name="contact_number" id="contact_number" placeholder="Contact Number" required>
-      </div>
+          <div class="mb-2" id="formsign">
+            <label for="inputPassword5" class="form-label text-white"
+              ><i class="bi bi-key"></i> Password</label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control bg-white text-dark"
+              aria-describedby="passwordHelpBlock"
+              placeholder="Password"
+              required
+            />
+          </div>
 
-      <div class="mb-2" id="formsign">
-        <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-facebook"></i> Facebook Link</label>
-        <input type="text" class="form-control bg-white text-dark" name="fb_link" id="fb_link" placeholder="Facebook Link" required>
-      </div>
+          <div class="mb-2" id="formsign">
+            <label for="inputPassword5" class="form-label text-white"
+              ><i class="bi bi-key"></i> Password Confirmation</label
+            >
+            <input
+              type="password"
+              name="password_confirmation"
+              id="password_confirmation"
+              class="form-control bg-white text-dark"
+              aria-describedby="passwordHelpBlock"
+              placeholder="Password Confirmation"
+              required
+            />
+          </div>
 
-      <div class="mb-2" id="formsign">
-        <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-envelope-at"></i> Email Address</label>
-        <input type="email" class="form-control bg-white text-dark" name="email" id="email" placeholder="Email Address" required>
-      </div>
-      
-      <div class="mb-2" id="formsign">
-      <label for="inputPassword5" class="form-label text-white"><i class="bi bi-key"></i> Password</label>
-      <input type="password" name="password" id="password" class="form-control bg-white text-dark" aria-describedby="passwordHelpBlock"
-      placeholder="Password" required>
-        </div>
+          <div class="mb-2" id="formsign">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              ><i class="bi bi-buildings"></i> College</label
+            >
+            <input
+              type="text"
+              class="form-control bg-white text-dark"
+              name="college_name"
+              id="college_name"
+              placeholder="College"
+              required
+            />
+          </div>
 
-        <div class="mb-2" id="formsign">
-          <label for="inputPassword5" class="form-label text-white"><i class="bi bi-key"></i> Password Confirmation</label>
-          <input type="password" name="password_confirmation" id="password_confirmation" class="form-control bg-white text-dark" aria-describedby="passwordHelpBlock"
-          placeholder="Password Confirmation" required>
-            </div>
-     
-        <div class="text-center mx-auto mt-4">
-          <button class="btn btn-primary" id="btnsignup" type="submit">Sign up</button>
-        </div>
+          <div class="mb-2" id="formsign">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              ><i class="bi bi-building"></i> Program</label
+            >
+            <input
+              type="text"
+              class="form-control bg-white text-gray"
+              name="program_name"
+              id="program_name"
+              placeholder="Program"
+              required
+            />
+          </div>
+          <div class="text-center mx-auto mt-4">
+            <button class="btn btn-primary" id="btnsignup" type="submit">
+              Sign up
+            </button>
+          </div>
+        </form>
 
-    </form>
-      
+        <br />
+        <br />
 
-
-    <br>
-    <br>
-
-     
-      
-      
-
-
-
-
-    
-    
-
-    <script src="./js/capacitor-welcome.js" type="module"></script>
-  </body>
-</html>
-   
-
-
-    
-    
+        <script src="./js/capacitor-welcome.js" type="module"></script>
+      </body>
+    </html>
 
     <script src="./js/capacitor-welcome.js" type="module"></script>
   </body>
