@@ -27,10 +27,13 @@ form_signup.onsubmit = async (e) => {
            last_name: formData.get("last_name") ,
            contact_number: formData.get("contact_number"),
            fb_link: formData.get("fb_link") ,
-           user_id: user_id,
+           id: user_id,
         },
         ])
         .select()
+        }else{
+            alert("error fetching");
+            console.log(error);
         }
 
 
@@ -47,6 +50,9 @@ form_signup.onsubmit = async (e) => {
      console.log(error);
 
 
+    }else{
+        alert("password doesnt match");
+        console.log(error);
     }
 
 };
