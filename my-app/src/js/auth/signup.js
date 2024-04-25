@@ -6,53 +6,69 @@ form_signup.onsubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(form_signup);
+    const password = formData.get("password");
+    const email = formData.get("email");
+    const firstName = formData.get("first_name");
+    const lastName = formData.get("last_name");
+    const contactNumber = formData.get("contact_number");
+    const fbLink = formData.get("fb_link");
+    const collegeName = formData.get("college_name");
+    const programName = formData.get("program_name");
+    
+    if (password == formData.get("password_confirmation")) {
+        const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
+            email: email,
+            password: password,
+        });
 
-    if(formData.get("password") == formData.get("password_confirmation")){
-        alert("Password match");
+        let userId = signUpData?.user?.id;
 
-     const {data, error} = await supabase.auth.signUp({
-        email: formData.get("email"),
-        password: formData.get("password"),
-     });
-     
+        if (userId != null) {
+            const { data: userInfoData, error: userInfoError } = await supabase
+                .from('userinformation')
+                .insert([
+                    {
+                        first_name: firstName,
+                        last_name: lastName,
+                        contact_number: contactNumber,
+                        fb_link: fbLink,
+                        user_id: userId,
+                    },
+                ]);
 
-     let user_id = data?.user?.id;
+            const { data: collegeData, error: collegeError } = await supabase
+                .from('college')
+                .insert([
+                    {
+                        college_name: collegeName,
+                        user_id: userId,
+                    },
+                ]);
 
+            let college_id = collegeData?.id;
 
-        if(user_id != null){
-            const { data, error } = await supabase
-           .from('userinformation')
-           .insert([
-          { first_name: formData.get("first_name") ,
-           last_name: formData.get("last_name") ,
-           contact_number: formData.get("contact_number"),
-           fb_link: formData.get("fb_link") ,
-           user_id: user_id,
-        },
-        ])
-        .select()
-        }else{
-            alert("error fetching");
-            console.log(error);
+            const { data: programData, error: programError } = await supabase
+                .from('program')
+                .insert([
+                    {
+                        program_name: programName,
+                        college_id: college_id,
+                    },
+                ]);
+
+            console.log(userInfoData);
+            console.log(userInfoError);
+            console.log(collegeData);
+            console.log(collegeError);
+            console.log(programData);
+            console.log(programError);
+            alert("Sign Up Successful");
+            
+        } else {
+            alert(`Error: ${signUpError.message}`);
+            console.log(signUpError);
         }
-
-
-        
-     
-
-
-
-
-
-
-
-     console.log(data);
-     console.log(error);
-
-
-    }else{
-        alert("password doesnt match");
-        console.log(error);
+    } else {
+        alert("Password doesn't match");
     }
-
 };
