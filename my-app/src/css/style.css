@@ -1,0 +1,932 @@
+/*html, body { //INDEX
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container-fluid {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden; 
+}
+
+/*
+.img-fluid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default styles */
+@media (min-width: 768px) {
+  /* Styles for screens wider than 768px (e.g., tablets and desktops) */
+  #hero .col-lg-6 {
+    order: initial; /* Reset the order property */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  /* Styles for screens up to 767px wide (e.g., mobile phones) */
+  #hero .col-lg-6 {
+    order: -1; /* Move the text column above the image column */
+    text-align: center; /* Center-align the text */
+  }
+  #hero .hero-img {
+    margin-top: 20px; /* Add some top margin to the image for spacing */
+  }
+}
+
+#homecontainer {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2; /* Ensure it's above contbody */
+  margin-bottom: -50px; /* Negative margin to overlap contbody */
+  border-radius: 50px / 20px;
+}
+
+#homecontainer .text-center {
+  font-size: 30px; /* Default font size for smaller screens */
+  margin-top: -49px; /* Adjust margin-top to move the h3 element up */
+  margin-bottom: 10px; /* Adjust margin-bottom for spacing */
+}
+
+@media screen and (min-width: 576px) {
+  #homecontainer .text-center {
+    font-size: 60px; /* Increase font size for medium screens */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #homecontainer .text-center {
+    font-size: 40px; /* Increase font size for larger screens */
+    margin-top: -60px; /* Adjust margin-top for larger screens */
+    margin-bottom: 20px; /* Adjust margin-bottom for spacing */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for .container-fluid */
+/* Styles for .container-fluid */
+/* Styles for .container-fluid */
+
+.container-fluid {
+  padding: 10px; /* Optional: Add padding for better spacing */
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 2; /* Ensure it's above contbody */
+  margin-bottom: -40px; /* Negative margin to overlap contbody */
+  border-radius: 50px / 20px; /* Adjust the values as needed */
+}
+
+/* Additional CSS for bottom navigation */
+@media screen and (max-width: 767px) {
+  .nav_menu {
+    border-radius: 0; /* Reset border-radius for bottom navigation */
+  }
+}
+
+/* Reset margin-bottom for bottom navigation */
+.nav_menu {
+  margin-bottom: 0; /* Reset margin-bottom for bottom navigation */
+}
+
+#contbody {
+  background-color: rgb(25, 24, 24);
+  z-index: 0;
+}
+
+#header_cont{
+  background-color: rgb(4, 177, 165);
+  padding-top: 4px; padding-bottom: 4px; padding-left: 3px; padding-right: 3px;
+}
+
+
+/* Viewmore container */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Set the height as needed */
+}
+
+#container-fluid_view {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2; /* Ensure it's above contbody */
+  margin-bottom: -40px; /* Negative margin to overlap contbody */
+  border-radius: 50px / 20px; /* Adjust the values as needed */
+
+}
+#view_cont {
+  background-color: rgb(4, 177, 165);
+  padding: 10px; /* Adjust padding for desired size */
+  border-radius: 8px;
+  margin-bottom: -80px; /* Small negative margin for overlapping */
+
+}
+
+.col-lg-12 {
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+}
+
+.centered-content {
+  text-align: center; /* Center text inside */
+}
+
+.bi-facebook{
+  color: blue;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .star-rating label {
+    font-size: 20px;
+  }
+
+  .custom-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+#contbody {
+  background-color: rgb(25, 24, 24);
+  border-radius: 10px;
+  margin-top: -10px; /* Small negative margin for overlapping */
+}
+
+.bi-arrow-left {
+  font-size: 2.0rem; /* Adjust the size as needed */
+  margin-right: 6px; /* Add some spacing between icon and text */
+  margin-bottom: 7px;
+}
+
+.bi-house{
+  font-size: 1.5rem; /* Adjust the size as needed */
+  margin-right: 6px; /* Add some spacing between icon and text */
+  margin-bottom: 7px;
+}
+
+#viewlink {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+/* add container */
+
+.bi-camera {
+  font-size: 3.0rem; /* Adjust the size as needed */
+  margin-right: 7px; /* Add some spacing between icon and text */
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+#add_cont {
+  background-color: rgb(4, 177, 165);
+  padding: 10px; /* Adjust padding for desired size */
+  border-radius: 8px;
+  margin-bottom: -80px; /* Small negative margin for overlapping */
+  height: 400px;
+}
+#addcontainer{
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; /* Add padding if necessary */
+}
+
+#buttonsave {
+  background-color: rgb(4, 177, 165);
+  height: 3.5rem;
+  width: 4.5rem;
+}
+
+#buttoncan{
+  background-color: rgb(7, 7, 7);
+  height: 2.5rem;
+  width: 4.5rem;
+}
+
+#buttonsav {
+  background-color: rgb(4, 177, 165);
+  height: 2.5rem;
+  width: 4.5rem;
+}
+
+#buttoncancel{
+  background-color: rgb(7, 7, 7);
+  height: 3.5rem;
+  width: 4.5rem;
+}
+
+
+.bi-trash{
+  font-size: 1.8rem; 
+
+}
+.bi-pencil-square{
+  font-size: 1.7rem; 
+}
+
+
+
+
+
+/* PROOOFILEE*/
+#profilefluid {
+  padding: 10px; /* Optional: Add padding for better spacing */
+  background-color: rgb(4, 177, 165);
+  position: relative;
+  z-index: 2; /* Ensure it's above contbody */
+  margin-bottom: -40px; /* Negative margin to overlap contbody */
+  border-radius: 15px / 1px; /* Adjust the values as needed */
+  max-height: 500px;
+  max-width: 2000px;
+  height: 250px; /* Set the desired height */
+}
+
+.profile-pic-container {
+  position: relative;
+  display: inline-block;
+}
+
+
+.profile-pic-container {
+  width: 150px; /* Fixed size for the profile picture */
+  height: 150px; /* Fixed size for the profile picture */
+  border-radius: 100%; /* Perfect circle */
+  margin-right: 10px; /* Margin for spacing */
+  display: inline-block;
+  overflow: hidden; /* Ensure the image stays within the rounded container */
+  bottom: -100px; /* Adjust as needed for the overlap */
+}
+
+
+
+#profbutton{
+  font-size: 20px; /* Adjust the font size as needed */
+  width: 200px; /* Adjust the width as needed */
+   height: 50px; 
+
+}
+
+#profrow {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+ /* HOMEEE */
+ 
+ #searchbar {
+  width: 60%;
+  margin: 0 auto; /* Center the search bar horizontally */
+  
+}
+
+#searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchbar input[type="text"] {
+  flex-grow: 1; /* Take up remaining space */
+  border-radius: 25px 0 0 25px; /* Rounded corners on left side */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: 1px solid #ccc;
+  outline: none; /* Remove outline on focus */
+}
+
+#btnsearch {
+  height: 100%; /* Make button height same as search bar */
+  border-radius: 0 25px 25px 0; /* Rounded corners on right side */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: 1px solid #ccc;
+  background-color: #f8f9fa; /* Optional: Adjust button background color */
+  outline: none; /* Remove outline on focus */
+}
+
+#btnsearch i {
+  color: #000; /* Adjust icon size as needed */
+}
+
+@media (max-width: 768px) {
+  #searchbar {
+    width: 89%;
+  }
+}
+
+
+
+
+ /* BOTTOM NAAVVV */
+
+ .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 6000px) {
+  .nav_menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color:  rgb(4, 177, 165);
+    box-shadow: 0 -1px 12px;
+    width: 100%;
+    height: 4.3rem;
+    padding-top: 1px;
+    display: grid;
+    align-content: center;
+    border-radius: 1.30rem 1.30rem 0 0;
+    transition: .4s;
+  }
+}
+
+
+.nav_menu ul li a{
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 200;
+}
+
+
+.nav_menu ul li a .nav_icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.9rem;
+  text-align: center;
+  transition: 0.5s;
+  font-weight: 300;
+  color: var(--clr);
+}
+
+
+
+.nav_menu ul .nav-item:active a .nav_icon{
+   transform: translateY(-20px);
+}
+
+
+.nav_menu ul li a .nav_name {
+  position: absolute;
+  color: var(--clr);
+  font-weight: 400;
+  font-size: 0.75rem;
+  padding-top: 9px;
+  padding-left: 8px; /* Adjust the left padding as needed */
+  padding-right: 8px; /* Adjust the right padding as needed */
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  transform: translateY(20px);
+}
+
+
+.nav_menu ul .nav-item:active a .nav_name{
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.nav_menu ul li a.active .nav_icon,
+.nav_menu ul li a.active .nav_name {
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+.nav_list,
+.nav_link {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_link {
+  flex-direction: column; /* Change to column */
+  align-items: center;
+  row-gap: .30rem;
+  font-weight: 600;
+}
+
+.nav_list {
+  justify-content: space-around;
+}
+
+.nav_name {
+  font-size: var(--tiny-font-size);
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.nav_icon {
+  font-size: 1.7rem; /* Set font size for icons */
+}
+
+.nav-link.active .nav_icon {
+  color: white; /* Change color of icon when link is active */
+}
+
+
+
+.card button {
+  background-color: rgb(60, 152, 146);
+}
+
+  /* CARDDS */
+/* Define a media query for devices with a maximum width of 768px (typical for tablets and mobile devices) */
+
+@media (max-width: 768px) {
+  /* Override the default behavior of row-cols-md-2 to make the cards display in a single row with two columns */
+  .row-cols-md-2 > .col {
+    flex: 0 0 50%; /* Set the width of each column to 50% */
+    max-width: 50%; 
+    /* Set the maximum width of each column to 50% */
+  }
+
+}
+
+
+.custom-btn {
+  
+  border: none;
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+.custom-btn:hover{
+  background-color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .custom-btn {
+    padding: 12px 18px; /* Increase padding for larger screens */
+    font-size: 16px; /* Increase font size for larger screens */
+  }
+}
+
+/* Media query for desktops and larger screens */
+@media screen and (min-width: 992px) {
+  .custom-btn {
+    padding: 14px 20px; /* Further increase padding for larger screens */
+    font-size: 18px; /* Further increase font size for larger screens */
+  }
+}
+
+
+.card {
+   /* Your desired width */
+   box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;  margin: 0 auto; /* Centers the card horizontally */  
+}
+
+#cards{
+  background-color: rgb(223, 240, 236);
+  
+}
+
+
+
+
+  /* Media query for medium-sized devices */
+/* Media query for all mobile devices */
+/* Media query for mobile devices */
+
+
+
+
+
+
+
+
+
+/* GetStarted*/
+
+#hero {
+  width: 100%;
+  height: 80vh;
+}
+
+#hero .container {
+  padding-top: 72px;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+#hero h2 {
+  margin-bottom: 30px; /* Adjust margin for better spacing */
+  font-size: 24px;
+}
+
+#hero .btn-get-started {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #47b2e4;
+  text-decoration: none; /* Remove underline */
+}
+
+#hero .btn-get-started:hover {
+  background: #209dd8;
+}
+
+
+#btnindex {
+  width: 40%;
+  border-radius: 12px;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+@media (max-width: 768px) { /* Adjust styles for mobile devices */
+  #btnindex {
+    width: 70%; /* Reduce width for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+.star-rating {
+  display: inline-block;
+  font-size: 0;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  display: inline-block;
+  width: 20px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.star-rating label:before {
+  content: "\2605"; /* Unicode character for star */
+  color: #ccc;
+}
+
+.star-rating input[type="radio"]:checked ~ label:before {
+  color: #fdd835; /* Change color for checked star */
+}
+
+
+/* LOGIN*/
+
+
+#emailform{
+  width: 70%;
+  border-radius: 12px;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+@media (max-width: 768px) { /* Adjust styles for mobile devices */
+  #emailform {
+    width: 100%; /* Reduce width for smaller screens */
+  }
+}
+
+.form-floating {
+  position: relative;
+}
+
+.bi-envelope {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.5rem; /* Adjusted left position */
+}
+
+.form-floating {
+  position: relative;
+}
+
+.bi-envelope {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.7rem; /* Adjusted left position */
+}
+.bi-lock {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.7rem; /* Adjusted left position */
+}
+
+#btnsign {
+  width: 60%;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) { /* Adjust styles for mobile devices */
+  #btnsign {
+    width: 80%; /* Reduce width for smaller screens */
+  }
+}
+
+
+#btnlogin{
+  width: 40%;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+@media (max-width: 768px) { /* Adjust styles for mobile devices */
+  #btnlogin {
+    width: 60%; /* Reduce width for smaller screens */
+  }
+}
+
+
+
+
+
+
+/* SIGN UPP */
+#backsign{
+  font-size: 2.0rem; /* Adjust the size as needed */
+  margin-left: 10px;
+  color: white;
+}
+
+#formsign{
+  width: 40%;
+  border-radius: 12px;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+@media (max-width: 768px) { /* Adjust styles for mobile devices */
+  #formsign {
+    width: 80%; /* Reduce width for smaller screens */
+  }
+}
+
+#btnsignup{
+  width: 27%;
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+@media (max-width: 768px) { /* Adjust styles for mobile devices */
+  #btnsignup {
+    width: 70%; /* Reduce width for smaller screens */
+  }
+}
+
+
+
+
+
+
+#form1 {
+  color: rgb(0, 0, 0); /* Text color */
+  background-color: #343a40; /* Background color */
+  border: none; /* Remove the border */
+  border-radius: 1; /* Remove border radius */
+}
+
+#form2 {
+  color: rgb(0, 0, 0); /* Text color */
+  background-color: #343a40; /* Background color */
+  border: none; /* Remove the border */
+  border-radius: 1; /* Remove border radius */
+}
+
+#form3 {
+  color: rgb(0, 0, 0); /* Text color */
+  background-color: #343a40; /* Background color */
+  border: none; /* Remove the border */
+  border-radius: 1; /* Remove border radius */
+}
+#form4 {
+  color: rgb(0, 0, 0); /* Text color */
+  background-color: #343a40; /* Background color */
+  border: none; /* Remove the border */
+  border-radius: 1; /* Remove border radius */
+}
+
+
+#labelleft
+ {
+  left: 1.2rem;
+}
+
+#floatingEmail {
+  padding-left: 2.5rem; /* Adjusted left padding */
+}
+
+#floatingPass {
+  padding-left: 2.5rem; /* Adjusted left padding */
+}
+
+/* ABOUT ME */
+#aboutmefluid {
+  padding: 10px; /* Optional: Add padding for better spacing */
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  z-index: -1; /* Ensure it's above contbody */
+  margin-bottom: -40px; /* Negative margin to overlap contbody */
+  border-radius: 17px / 0px; /* Adjust the values as needed */
+  max-height: 600px;
+  max-width: 600px;
+  height: 200px; /* Set the desired height */
+}
+/* Additional CSS for bottom navigation */
+@media screen and (max-width: 767px) {
+  .nav_menu {
+    border-radius: 0; /* Reset border-radius for bottom navigation */
+  }
+}
+
+/* Reset margin-bottom for bottom navigation */
+.nav_menu {
+  margin-bottom: 0; /* Reset margin-bottom for bottom navigation */
+}
+
+.floating-image {
+  animation-name: floatAnimation; /* Define the name of the animation */
+  animation-duration: 2s; /* Set the duration of the animation */
+  animation-timing-function: ease-in-out; /* Set the timing function */
+  animation-iteration-count: infinite; /* Make the animation repeat infinitely */
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px); /* Move the image up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.card-img-top {
+  max-width: 100%;
+  max-height: 200px; /* Adjust the max-height as needed */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* FEED */
+#feedbtn {
+  background-color: rgb(60, 152, 146);
+}
+
+
+@media screen and (max-width: 767px) {
+  .star-rating {
+    display: flex;
+    justify-content: center;
+  }
+
+  .star-rating input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+  }
+
+  .star-rating label {
+    display: inline-block;
+    width: 30px; /* Adjust the width of the star icons */
+    height: 30px; /* Adjust the height of the star icons */
+    background-image: url('path/to/star-icon.png'); /* Replace 'path/to/star-icon.png' with your actual star icon image */
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  /* Adjust the background position for each star rating label */
+  .star-rating input[type="radio"]:checked ~ label {
+    background-position: 0 -30px; /* Example: move the background image up by the height of one star icon */
+  }
+}
+
+
+
+/* Default styles for the accordion */
+
+
+
+
+
+/* CSS for changing color on accordion button click */
+
+/* Media query for tablets and larger screens */
