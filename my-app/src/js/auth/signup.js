@@ -35,17 +35,20 @@ form_signup.onsubmit = async (e) => {
                         user_id: userId,
                     },
                 ]);
+                const Id = userInfoData[0].id;
+                console.log(Id);
 
             const { data: collegeData, error: collegeError } = await supabase
                 .from('college')
                 .insert([
                     {
                         college_name: collegeName,
-                        user_id: userId,
+                        user_id: Id,
                     },
                 ]);
 
-            let college_id = collegeData?.id;
+            const college_id = collegeData[0].id;
+            console.log(college_id);
 
             const { data: programData, error: programError } = await supabase
                 .from('program')
@@ -56,12 +59,7 @@ form_signup.onsubmit = async (e) => {
                     },
                 ]);
 
-            console.log(userInfoData);
-            console.log(userInfoError);
-            console.log(collegeData);
-            console.log(collegeError);
-            console.log(programData);
-            console.log(programError);
+           
             alert("Sign Up Successful");
             
         } else {
