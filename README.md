@@ -2,7 +2,7 @@ an app for laptop buy and sell.
 
 -Original Developer: Claire Anne Bohol, Pearl and Dyanna
 
--Co Developer: Centmarde Campado
+contributors: Centmarde Campado
 
 -Tech Stack: vanilla HTML, BootsTrap CSS, vanilla JS
 
