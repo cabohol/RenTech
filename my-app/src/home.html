@@ -9,7 +9,6 @@
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    
 
     <script
       type="module"
@@ -23,239 +22,124 @@
     <link rel="icon" type="image/x-icon" href="./assets/icon/9.png" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <script type="module" src="./js/name.js"></script>
+    <script type="module" src="./js/auth/home.js"></script>
     <meta name="theme-color" content="#31d53d" />
-
   </head>
   <body>
-
-    
-    
-    <!--FIRST ROW-->  
-    <div class="container-fluid" id="homecontainer" >
+    <!--FIRST ROW-->
+    <div class="container-fluid" id="homecontainer">
       <div class="row align-items-center px-4 pt-2">
         <div class="col">
-          <a class="nav-link d-flex align-items-center" href="overview1.html" id="viewlink">
-        <i class="bi bi-house"></i>        
-        <span class="nav_name"><h3>HOME</h3></span>
-      </a>   
+          <a
+            class="nav-link d-flex align-items-center"
+            href="overview1.html"
+            id="viewlink"
+          >
+            <i class="bi bi-house"></i>
+            <span class="nav_name"><h3>HOME</h3></span>
+          </a>
         </div>
-      <div class="col text-end">
-        <img src="assets/imgs/logooo.png" alt="" height="40px" width="40px">
+        <div class="col text-end">
+          <img src="assets/imgs/logooo.png" alt="" height="40px" width="40px" />
+        </div>
       </div>
-       
-
-      </div>
-              <div class="row align-items-center d-flex justify-content-between">
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="assets/imgs/laptopvid-unscreen.gif" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="assets/imgs/laptop2unscreen.gif" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="assets/imgs/laptop3unscreen.gif" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                    
-                  </div>
-
-                  
-                
-             <br>
+      <div class="row align-items-center d-flex justify-content-between">
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="assets/imgs/laptopvid-unscreen.gif"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
+            <div class="carousel-item">
+              <img
+                src="assets/imgs/laptop2unscreen.gif"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/imgs/laptop3unscreen.gif"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
 
-  </div>
-
-      
-
-  <div class="container-fluid" id="contbody">
-    <br>
-    <br>
-    <h2 class="text-center text-white py-3">Laptops For Lease, Success Guaranteed!
-    </h2>
-    
-    <div class="text-center" id="search">
-    <nav class="d-flex justify-content-center align-items-center" id="searchbar">
-      <input type="text" placeholder="Search.." name="search" class="form-control">
-      <button id="btnsearch" type="submit" class="btn btn-outline-secondary"><i class="bi bi-search"></i></button>
-    </nav>
-
-
+        <br />
+      </div>
     </div>
-    
-    
-    
 
-    <!--PRODUCT CARDS-->
+    <div class="container-fluid" id="contbody">
+      <br />
+      <br />
+      <h2 class="text-center text-white py-3">
+        Laptops For Lease, Success Guaranteed!
+      </h2>
 
-     <br>
-     <div class="container" id="product-cards">
-      <div class="card-group">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-          <div class="col">
-            <div class="card" id="cards">
-                <img src="assets/imgs/mac.png" class="card-img-top pt-3" id="homeimg" alt="...">
-                <div class="card-body">
-                    <div class="row text-center">
-                      <h3 class="card-title">MacBook</h3>
-                      <h6>Php 60.00/hr</h6>
-                      <p></p>
-                      <div class="d-flex justify-content-center align-items-center">
-                          <button class="text-white custom-btn d-flex justify-content-center align-items-center "> <a style="text-decoration: none;" class="link-light" href="viewmore.html">View More</a> </button>
-                      </div>
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="col">
-          <div class="card" id="cards" >
-              <img src="assets/imgs/lenovothink.png" class="card-img-top pt-3 mx-auto" alt="...">
-              <div class="card-body">
-                <div class="row text-center">
-                  <h3 class="card-title">Lenovo</h3>
-                  <h6>Php 60.00/hr</h6>
-                  <p class="card-text"></p>
-                  <div class="d-flex justify-content-center align-items-center">
-                      <button class="text-white custom-btn"><a style="text-decoration: none;" class="link-light" href="viewmore.html">View More</a></button>
-                  </div>
-                   
-                </div>
-              </div>
-          </div>
+      <div class="text-center" id="search">
+        <nav
+          class="d-flex justify-content-center align-items-center"
+          id="searchbar"
+        >
+          <input
+            type="text"
+            placeholder="Search.."
+            name="search"
+            class="form-control"
+          />
+          <button
+            id="btnsearch"
+            type="submit"
+            class="btn btn-outline-secondary"
+          >
+            <i class="bi bi-search"></i>
+          </button>
+        </nav>
       </div>
-      
-      <div class="col">
-        <div class="card" id="cards">
-            <img src="assets/imgs/asus.png" class="card-img-top pt-3" alt="...">
-            <div class="card-body">
-              <div class="row text-center">
-                <h3 class="card-title">Asus</h3>
-                <h6>Php 60.00/hr</h6>
-                <p class="card-text"></p>
-                <div class="d-flex justify-content-center align-items-center">
-                    <button class="text-white custom-btn"><a style="text-decoration: none;" class="link-light" href="viewmore.html">View More</a></button>
-                </div>
-                 
-              </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col">
-      <div class="card" id="cards">
-          <img src="assets/imgs/dell.png" class="card-img-top pt-3" alt="...">
-          <div class="card-body">
-            <div class="row text-center">
-              <h3 class="card-title">Dell</h3>
-              <h6>Php 60.00/hr</h6>
-              <p class="card-text"></p>
-              <div class="d-flex justify-content-center align-items-center">
-                  <button class="text-white custom-btn   "><a style="text-decoration: none;" class="link-light" href="viewmore.html">View More</a></button>
-              </div>
-               
-            </div>
-          </div>
-      </div>
-  </div>
-  
-  <div class="col">
-    <div class="card" id="cards">
-        <img src="assets/imgs/huawei.png" class="card-img-top pt-3" alt="...">
-        <div class="card-body">
-          <div class="row text-center">
-            <h3 class="card-title">Huawei</h3>
-            <h6>Php 60.00/hr</h6>
-            <p class="card-text"></p>
-            <div class="d-flex justify-content-center align-items-center">
-                <button class="text-white custom-btn"><a style="text-decoration: none;" class="link-light" href="viewmore.html">View More</a></button>
-            </div>
-             
-          </div>
-        </div>
-    </div>
-</div>
 
-<div class="col">
-  <div class="card" id="cards">
-      <img src="assets/imgs/acer1.png" class="card-img-top pt-2 mx-auto" alt="...">
-      <div class="card-body">
-        <div class="row text-center">
-          <h3 class="card-title">Acer</h3>
-          <h6>Php 60.00/hr</h6>
-          <p class="card-text"></p>
-          <div class="d-flex justify-content-center align-items-center">
-              <button class="text-white custom-btn"><a style="text-decoration: none;" class="link-light" href="viewmore.html">View More</a></button>
-          </div>
-           
-        </div>
-      </div>
-  </div>
-</div>
+      <!--PRODUCT CARDS-->
+
+      <br />
+
  
-     <!-- ======= Frequently Asked Questions Section ======= -->
-       </div>
+         <div class="row"  id="cardsContainer" ></div>
       
      
-      
-       
 
-        
-        
-
-        <br>
-        
-      </div>
+      <br />
+      <br />
+      <br />
     </div>
 
-    
-  
-  
-     <br>
-     <br>
-     <br>
-    
-    
-       
-
-
-      
-
-
-
-     
-  
-
-  </div>
-  
-  
-
-
-  
-  
-  
-  
-  
-  
-    
-    
     <!--BOTTOM NAVBAR-->
 
-
-    
     <div class="container-fluid nav_menu" id="nav_menu">
       <ul class="nav_list">
         <li class="nav-item">
-          <a class="nav-link active" onclick="handleClick(this)" href="home.html">
-               <i class="bi bi-house-door nav_icon"></i>
+          <a
+            class="nav-link active"
+            onclick="handleClick(this)"
+            href="home.html"
+          >
+            <i class="bi bi-house-door nav_icon"></i>
             <span class="nav_name">Home</span>
           </a>
         </li>
@@ -282,46 +166,23 @@
             <span class="nav_name">Profile</span>
           </a>
         </li>
-        
-        
       </ul>
     </div>
-    
-      
-    
-    
+
     <!-- Bootstrap Bundle with Popper -->
-    
-    
-    
-    
+
     <script>
-      const list = document.querySelectorAll('.list');
-      function activeLink(){
-          list.forEach((item) =>
-          item.classList.remove('active'));
-          this.classList.add('active')
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
       }
-          list.forEach((item) =>
-          item.addEventListener('click', activeLink))
-  </script>
-
-
-
-
-
-
-
-
-
-
+      list.forEach((item) => item.addEventListener("click", activeLink));
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="./js/capacitor-welcome.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-
-
-  
   </body>
 </html>
