@@ -22,7 +22,7 @@ async function getDatas() {
                   <h3 class="card-title">${data.model}</h3>
                   <p class="card-text"></p>
                   <div class="d-flex justify-content-center align-items-center">
-                    <button class="text-white custom-btn view-button" data-index="${index}" href="overview.html">View ${index}</button>
+                    <button class="text-white custom-btn view-button" data-index="${index}">View ${index}</button>
                   </div>
                 </div>
               </div>
@@ -40,16 +40,17 @@ async function testFunction(index) {
     localStorage.setItem("laptop_info", JSON.stringify(laptop));
     console.log(laptop);
     // Dito ay maaari mong gawin ang anumang iba pang mga hakbang na may kinalaman sa pagpapakita ng impormasyon
-    window.location.href = "overview.html";
-  } else {
+    window.location.pathname = '/overview.html';
+    } else {
     console.error("No laptop found at index:", index);
   }
 }
 
-getDatas();
-document.body.addEventListener("click", function (event) {
-  if (event.target.id === "index") {
-    const index = parseInt(event.target.dataset.index); // Convert string to number
-    testFunction(index); // Pass the index to testFunction
+getDatas(); // Tawagin ang getDatas nang mauna upang kunin agad ang mga data
+
+document.getElementById("cardsContainer").addEventListener("click", function(event) {
+  if (event.target.classList.contains("view-button")) {
+    const index = parseInt(event.target.dataset.index);
+    testFunction(index);
   }
 });
