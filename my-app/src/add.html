@@ -9,7 +9,6 @@
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    
 
     <script
       type="module"
@@ -23,164 +22,181 @@
     <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <script type="module" src="./js/name.js"></script>
+    <script type="module" src="./js/add.js"></script>
     <meta name="theme-color" content="#31d53d" />
-
   </head>
   <body>
-
-    
-    <!--FIRST ROW-->  
+    <!--FIRST ROW-->
     <div class="container-fluid" id="container-fluid_view">
-        
       <div class="row align-items-center px-4 pt-2">
         <div class="col">
-          <a class="nav-link d-flex align-items-center" href="home.html" id="viewlink">
-        <i class="bi bi-arrow-left"></i>        
-        <span class="nav_name"><h3>ADD</h3></span>
-      </a>   
+          <a
+            class="nav-link d-flex align-items-center"
+            href="home.html"
+            id="viewlink"
+          >
+            <i class="bi bi-arrow-left"></i>
+            <span class="nav_name"><h3>ADD</h3></span>
+          </a>
         </div>
-      <div class="col text-end">
-        <img src="assets/imgs/logooo.png" alt="" height="40px" width="40px">
+        <div class="col text-end">
+          <img src="assets/imgs/logooo.png" alt="" height="40px" width="40px" />
+        </div>
       </div>
-       
 
-      </div>
-    
-        
       <div class="container py-4 rounded mt-2" id="add_cont">
-          <div class="container">
-              <div class="row align-items-center d-flex justify-content-between">
-                  <div class="col-lg-12 pt-5">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                  
-                    <i class="bi bi-camera pt-5"></i>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                     
-                    
-                  </div>
-              </div>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <h4 class="py-5">Laptop 1</h4>
+        <div class="container">
+          <div class="row align-items-center d-flex justify-content-between">
+            <div class="col-lg-12 pt-5">
+              <br />
+              <br />
+              <br />
+              <br />
+
+              <i class="bi bi-camera pt-5"></i>
+              <br />
+              <br />
+              <br />
+              <br />
+            </div>
           </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h4 class="py-5">Laptop 1</h4>
+        </div>
       </div>
-      <br>
-  </div>
+      <br />
+    </div>
 
- 
-  
-  <div class="container-fluid pt-5 " id="contbody">
-    <br>
-    <br>
-    <div class="container rounded " id="addcontainer">
+    <div class="container-fluid pt-5" id="contbody">
+      <br />
+      <br />
+      <div class="container rounded" id="addcontainer">
+        <h3 class="text-center mt-4">LAPTOP INFORMATION</h3>
+        <br />
+        <form id="form_add">
+          <div class="mb-3 mx-3">
+            <p>Model :</p>
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              name="model"
+              id="model"
+              placeholder=""
+              aria-label=".form-control-lg example"
+              required
+            />
+            <br />
+            <p>Price per hour :</p>
+            <input
+              class="form-control form-control-lg"
+              type="number"
+              name="price"
+              id="price"
+              step=".01"
+              placeholder=""
+              aria-label=".form-control-lg example"
+              required
+            />
+            <br />
+            <p>Specification :</p>
+            <textarea
+              class="form-control form-control-lg"
+              type="text"
+              name="specs"
+              id="specs"
+              placeholder=""
+              aria-label=".form-control-lg example"
+              required
+            >
+            </textarea>
+            <br />
+            <p>Condition:</p>
+            <select
+              class="form-select"
+              name="condition"
+              id="condition"
+              aria-label="Default select example"
+              required
+            >
+              <option value="Old">Old</option>
+              <option value="New">New</option>
+              <option value="Slightly Use">Slightly Use</option>
+            </select>
+          </div>
 
-      <h3 class="text-center mt-4 ">LAPTOP INFROMATION</h3>
-      <br>
-      <div class="mb-3 mx-3">
-        <p>Model :</p>
-        <input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example">
-        <br>
-        <p>Price per hour :</p>
-        <input class="form-control form-control-lg" type="number" placeholder="" aria-label=".form-control-lg example">
-        <br>
-        <p>Specification : </p>
-        <textarea class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"> </textarea>
-        <br>
-        <p>Condition: </p>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Select</option>
-          <option value="1">Old</option>
-          <option value="2">New</option>
-          <option value="3">Slightly Use</option>
-        </select>
-
-      </div>
-        
-
-             <br>
-        <div class="mb-3 mx-3">
+          <br />
+          <div class="mb-3 mx-3">
             <label for="formFile" class="form-label">Upload Photo :</label>
-            <input class="form-control" type="file" id="formFile">
+            <input
+              class="form-control"
+              type="file"
+              name="image_path"
+              id="image_path"
+              required
+            />
           </div>
-
-      
-     
-
-
-
 
           <div class="row align-items-center px-5 pt-3">
             <div class="col text-start">
-              <button type="button" id="buttoncan" class="btn btn text-white">Cancel</button>
-                        </div>
+              <button type="button" id="buttoncan" class="btn btn text-white">
+                Cancel
+              </button>
+            </div>
             <div class="col text-end">
-                <button type="button" id="buttonsav" class="btn btn text-white">Save</button>
+              <button type="submit" id="buttonsav" class="btn btn text-white">
+                Save
+              </button>
             </div>
           </div>
-        
 
+          <br />
+          <br />
+        </form>
+      </div>
+      <br />
 
-        
-        <br>
-        <br>
+      <br />
 
+      <!--PRODUCT CARDS-->
+
+      <div class="container" id="product-cards"></div>
     </div>
-    <br>
-   
-    <br>
-   
 
-
-
-
-    <!--PRODUCT CARDS-->
-
-    <div class="container" id="product-cards">
-      
-    </div>
-  </div>
-  
-  
-
-
-  
-  
-  
-  
-  
-  
-    
-    
     <!--BOTTOM NAVBAR-->
 
     <div class="container-fluid nav_menu" id="nav_menu">
       <ul class="nav_list">
         <li class="nav-item">
           <a class="nav-link" href="home.html">
-               <i class="bi bi-house-door nav_icon"></i>
+            <i class="bi bi-house-door nav_icon"></i>
             <span class="nav_name">Home</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="feed.html">
+          <a class="nav-link" href="feed.html">
             <i class="bi bi-shop nav_icon"></i>
             <span class="nav_name">Feed</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" onclick="handleClick(this)" href="add.html">
+          <a
+            class="nav-link active"
+            onclick="handleClick(this)"
+            href="add.html"
+          >
             <i class="bi bi-plus-circle-fill nav_icon"></i>
           </a>
         </li>
@@ -196,25 +212,10 @@
             <span class="nav_name">Profile</span>
           </a>
         </li>
-        
-        
       </ul>
     </div>
-    
-    
-    
-    
-      
-      
-    
-    
-    <!-- Bootstrap Bundle with Popper -->
-    
-    
-    
-    
-   
 
+    <!-- Bootstrap Bundle with Popper -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

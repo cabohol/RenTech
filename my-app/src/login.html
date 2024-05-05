@@ -9,7 +9,6 @@
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    
 
     <script
       type="module"
@@ -22,61 +21,89 @@
     <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <script type="module" src="./js/name.js"></script>
     <script type="module" src="./js/auth/login.js"></script>
     <meta name="theme-color" content="#31d53d" />
 
-      <style>
-     #loginbody {
-      background-image: url('assets/imgs/colorfulbg.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-      </style>
-    
+    <style>
+      #loginbody {
+        background-image: url("assets/imgs/colorfulbg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
   </head>
   <body id="loginbody">
+    <br />
+    <div class="container my-5">
+      <img
+        src="assets/imgs/10.png"
+        class="mx-auto d-block"
+        width="150px"
+        height="150px"
+      />
+      <!-- Centering the image -->
+      <br />
+      <div class="alert alert-success mx-auto d-none" role="alert"></div>
+      <div class="alert alert-danger mx-auto d-none" role="alert"></div>
+      <h2 class="text-center text-white mb-3">Login</h2>
+    </div>
 
-    <br>
-    <div class="container my-5 ">
-      <img src="assets/imgs/10.png" class="mx-auto d-block" width="150px" height="150px" > <!-- Centering the image -->
-      <br>
-      </div>
-    <h2 class="text-center mt-3 text-white">Login</h2>
-       <br>
-       <div class="container">
-        <form id="emailform">
-          <div class="form-floating mb-3 mx-2">
-            <i class="icon bi bi-envelope bi-lg"></i>
-            <input name="email" type="email" class="form-control" id="floatingEmail" placeholder="Email" required>
-              <label for="floatingEmail" id="labelleft">Email Address:</label>
-          </div>
+    <div class="container">
+      <form id="emailform">
+        <div class="form-floating mb-3 mx-2">
+          <i class="icon bi bi-envelope bi-lg"></i>
+          <input
+            name="email"
+            type="email"
+            class="form-control"
+            id="floatingEmail"
+            required
+          />
+          <label for="floatingEmail" id="labelleft">Email Address:</label>
+        </div>
 
-          <div class="form-floating mb-3 mx-2">
-            <i class="icon bi bi-lock bi-lg"></i>
-            <input name="password" type="password" id="floatingPass" class="form-control" aria-describedby="passwordHelpBlock"
-            placeholder="password" required>
-              <label for="floatingEmail" id="labelleft">Password:</label>
-          </div>
-          <br>
-          <div class="text-center mx-auto">
-            <button class="btn btn-primary" id="btnlogin" type="submit"><a style="text-decoration: none;"  class="link-light">Log in</a></button>
-          </div>
-       
-          
-      <br>
-          <div class="text-center mx-auto">
-        <button class="btn btn-outline-light" id="btnsign" type="button"><a style="text-decoration: none;"  href="signup.html" class="link-light">Create New Account</a></button>
-      </div>
+        <div class="form-floating mb-3 mx-2">
+          <i class="icon bi bi-lock bi-lg"></i>
+          <input
+            name="password"
+            type="password"
+            id="floatingPass"
+            class="form-control"
+            aria-describedby="passwordHelpBlock"
+            required
+          />
+          <label for="floatingEmail" id="labelleft">Password:</label>
+        </div>
+        <br />
+        <div class="text-center mx-auto">
+          <button
+            class="btn btn-primary mb-3 d-flex justify-content-center align-items-center"
+            id="btnlogin"
+            type="submit"
+          >
+            <a style="text-decoration: none" class="link-light">Log in</a>
+          </button>
+        </div>
 
-        </form>
-       </div>
-
-     
-  
-    
+        <br />
+        <div class="text-center mx-auto">
+          <button class="btn btn-outline-light" id="btnsign" type="button">
+            <a
+              style="text-decoration: none"
+              href="signup.html"
+              class="link-light"
+              >Create New Account</a
+            >
+          </button>
+        </div>
+      </form>
+    </div>
 
     <script src="./js/capacitor-welcome.js" type="module"></script>
   </body>

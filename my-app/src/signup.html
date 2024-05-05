@@ -120,14 +120,21 @@
 
       <div class="mb-2" id="formsign">
         <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-buildings"></i> College</label>
-        <input type="text" class="form-control bg-white text-dark" name="college_name" id="college_name" placeholder="College" required>
+        <select class="form-select bg-white text-dark" name="college_name" id="college_name" aria-label="Default select example" required>
+          <option value="" selected>College</option>
+          <option value="CAA">CAA</option>
+          <option value="CCIS">CCIS</option>
+          <option value="CED">CED</option>
+          <option value="CEGS">CEGS</option>
+          <option value="CHASS">CHASS</option>
+          <option value="CMNS">CMNS</option>
+          <option value="COFES">COFES</option>
+
+        </select>
+
       </div>
 
-      <div class="mb-2" id="formsign">
-        <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-building"></i> Program</label>
-        <input type="text" class="form-control bg-white text-gray" name="program_name" id="program_name" placeholder="Program" required>
-      </div>
-
+     
       <div class="mb-2" id="formsign">
         <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-telephone"></i> Contact Number</label>
         <input type="number" class="form-control bg-white text-dark" name="contact_number" id="contact_number" placeholder="Contact Number" required>
@@ -135,7 +142,7 @@
 
       <div class="mb-2" id="formsign">
         <label for="exampleFormControlInput1" class="form-label text-white"><i class="bi bi-facebook"></i> Facebook Link</label>
-        <input type="text" class="form-control bg-white text-dark" name="fb_link" id="fb_link" placeholder="Facebook Link" required>
+        <input type="url" class="form-control bg-white text-dark" name="fb_link" id="fb_link" placeholder="Facebook Link" required>
       </div>
 
       <div class="mb-2" id="formsign">
@@ -156,7 +163,7 @@
             </div>
      
         <div class="text-center mx-auto mt-4">
-          <button class="btn btn-primary" id="btnsignup" type="submit">Sign up</button>
+          <button class="btn btn-primary mb-3 d-flex justify-content-center align-items-center" id="btnsignup" type="submit">Sign up</button>
         </div>
 
     </form>

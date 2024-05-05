@@ -6,7 +6,7 @@ import * as bootstrap from 'bootstrap'
 
 import { createClient } from '@supabase/supabase-js'
 
-import { setRouter } from './router/router'; //router para dile mo gawas if naka login na
+import { setRouter } from './router/router.js'; //router para dile mo gawas if naka login na
 
 setRouter(); //uncomment for disable router
 
@@ -43,6 +43,7 @@ function errorNotification(message, seconds = 0){
   }
 
 }
+
 
 
 
