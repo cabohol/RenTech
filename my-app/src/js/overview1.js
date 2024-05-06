@@ -22,7 +22,7 @@ async function getDatas() {
                   <h3 class="card-title">${data.model}</h3>
                   <p class="card-text"></p>
                   <div class="d-flex justify-content-center align-items-center">
-                    <button class="text-white custom-btn view-button" data-index="${index}">View ${index}</button>
+                    <button class="text-white custom-btn view-button" data-index="${index}">View</button>
                   </div>
                 </div>
               </div>

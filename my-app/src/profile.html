@@ -31,56 +31,62 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <script type="module" src="./js/name.js"></script>
-    <script type="module" src="./js/auth/profile.js"></script>
+    <script type="module" src="./js/auth/logout.js"></script>
     <meta name="theme-color" content="#31d53d" />
   </head>
   <body>
     <!--FIRST ROW-->
     <div class="container-fluid text-center" id="profilefluid">
       <br />
-      <div class="container text-center" id="profilebody">
-        <div class="profile-pic-container">
-          <img
-            src="assets/imgs/profilepic.jpg"
-            alt="Profile Picture"
-            class="img-fluid"
-          />
-          <input type="file" id="profilePicInput" style="display: none" />
+     
+      
+
+        <div class="container text-center" id="profilebody">
+          <div class="profile-pic-container">
+            <img
+              src="assets/imgs/profilepic.jpg"
+              alt="Profile Picture"
+              class="img-fluid"
+            />
+            <input type="file" id="profilePicInput" style="display: none" />
+          </div>
         </div>
+        <br />
       </div>
       <br />
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <div class="container text-center">
-      <h1>Juan Dela Cruz</h1>
-      <h6>Contact #: 0925367283</h6>
-      <h6>College: CCIS</h6>
-      <h6>Program: BSIT</h6>
-
       <br />
-
-      <div class="row" id="profrow">
-        <button type="button" class="btn btn-secondary btn-lg" id="profbutton">
-          Edit Profile
+      <br />
+      <br />
+      <div class="container text-center" id="profileContainer">
+        <h1>Juan Dela Cruz</h1>
+        <h6>Contact #: 0925367283</h6>
+        <h6>College: CCIS</h6>
+        
+  
+        <br />
+  
+        <div class="row" id="profrow">
+          <button type="button" class="btn btn-secondary btn-lg" id="profbutton">
+            Edit Profile
+          </button>
+        </div>
+  
+      
+        <hr />
+        <button
+          type="button"
+          class="btn btn-secondary btn-lg bg-primary"
+          id="logout_btn"
+        >
+          <i class="bi bi-box-arrow-right"></i> Logout
         </button>
+        
       </div>
 
-      <br />
+      
 
-      <hr />
-      <button
-        type="button"
-        class="btn btn-secondary btn-lg bg-primary"
-        id="logout_btn"
-      >
-        <i class="bi bi-box-arrow-right"></i> Logout
-      </button>
-      <br /><br /><br /><br />
-      <br /><br /><br /><br />
-    </div>
+    
+     
 
     <!--BOTTOM NAVBAR-->
 
