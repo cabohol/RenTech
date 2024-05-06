@@ -1,5 +1,9 @@
 import { supabase } from "./name";
 
+
+const itemsImageUrl =
+  "https://vlzwiqqexbsievtuzfgm.supabase.co/storage/v1/object/public/laptops/";
+
 let allLaptops = [];  // This array will store all laptop data
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -33,7 +37,7 @@ function displayLaptops(laptops) {
     container.innerHTML += `
       <div class="col">
       <div class="card" data-id="${laptop.id}">
-        <img src="${laptop.image_path}" class="card-img-top pt-2 mx-auto" alt="...">
+        <img src="${itemsImageUrl +  laptop.image_path}" class="card-img-top pt-2 mx-auto" alt="...">
         <div class="card-body">
           <div class="row text-center">
             <h3 class="card-title">${laptop.model}</h3>

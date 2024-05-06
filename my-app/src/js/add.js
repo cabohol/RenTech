@@ -11,7 +11,20 @@ const itemsImageUrl =
     e.preventDefault();
   
     const formData = new FormData(form_add);
-  
+
+      console.log(formData.get("image_path"));
+      const image = formData.get("image_path");
+      const { data: storageData, error: storageError } = await supabase.storage
+        .from('laptops')
+        .upload('public/' + image.name, image, {
+         cacheControl: "3600",
+        upsert: true,
+        });
+     
+      console.log(storageData);
+
+    const image_data = storageData;
+
     const { data, error } = await supabase
       .from('laptops')
       .insert([
@@ -20,7 +33,7 @@ const itemsImageUrl =
           price: formData.get("price"),
           specs: formData.get("specs"),
           condition: formData.get("condition"),
-          image_path: formData.get("image_path"),
+          image_path: image_data == null ? null:image_data.path,
           userinformation_id: userId, // Use the retrieved user's ID here
         },
       ])
@@ -43,7 +56,7 @@ async function getDatas() {
     container += `
     <div class="col">
       <div class="card" id="cards" data-id="${data.id}" >
-        <img src="${data.image_path}" class="card-img-top pt-2 mx-auto" alt="...">
+        <img src="${ itemsImageUrl + data.image_path}" class="card-img-top pt-2 mx-auto" alt="...">
         <div class="card-body">
           <div class="row text-center">
             <h3 class="card-title">${data.model}</h3>

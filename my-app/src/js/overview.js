@@ -1,5 +1,10 @@
 import { supabase } from "./name";
 
+
+const itemsImageUrl =
+  "https://vlzwiqqexbsievtuzfgm.supabase.co/storage/v1/object/public/laptops/";
+
+
 // Fetch elements once the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     let laptop_info = localStorage.getItem("laptop_info");
@@ -12,9 +17,12 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("price").value = laptop_info.price;
         document.getElementById("specs").value = laptop_info.specs;
         document.getElementById("condition").value = laptop_info.condition;
-        document.getElementById("image_path").value = laptop_info.image_path;
-    }
-
+        
+        // Set the image path in a separate element
+        const imagePath = laptop_info.image_path;
+        document.getElementById("image_path").textContent = imagePath;
+      }
+      
     // Setup event listeners for buttons
     setupEventListeners();
 });
