@@ -31,7 +31,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <script type="module" src="./js/name.js"></script>
-    <script type="module" src="./js/auth/logout.js"></script>
+    <script type="module" src="./js/auth/profile.js"></script>
     <meta name="theme-color" content="#31d53d" />
   </head>
   <body>
@@ -58,9 +58,11 @@
       <br />
       <br />
       <div class="container text-center" id="profileContainer">
-        <h1>Juan Dela Cruz</h1>
-        <h6>Contact #: 0925367283</h6>
-        <h6>College: CCIS</h6>
+        <h1 id="first_name"></h1>
+        <h1 id="last_name"></h1>
+        <h6 id="contact_number"></h6>
+        <h6 id="college_name"></h6>
+        
         
   
         <br />
@@ -134,28 +136,6 @@
 
     <script src="./js/capacitor-welcome.js" type="module"></script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const profilePicInput = document.getElementById("profilePicInput");
-        const profilePic = document.querySelector(".profile-pic-container img");
-
-        profilePicInput.addEventListener("change", function (event) {
-          const file = event.target.files[0];
-          const reader = new FileReader();
-
-          reader.onload = function (e) {
-            profilePic.src = e.target.result;
-          };
-
-          reader.readAsDataURL(file);
-        });
-
-        document
-          .getElementById("profbutton")
-          .addEventListener("click", function () {
-            profilePicInput.click(); // Trigger file input click when the button is clicked
-          });
-      });
-    </script>
+   
   </body>
 </html>

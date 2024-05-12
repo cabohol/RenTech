@@ -22,7 +22,7 @@ async function getDatas() {
       if (data.userinformation_id == userId) {
         container += `
           <div class="col">
-            <div class="card" data-id="${data.id}">
+            <div class="card" id="cards" data-id="${data.id}">
               <img src="${itemsImageUrl}${data.image_path}" class="card-img-top pt-2 mx-auto" alt="...">
               <div class="card-body">
                 <div class="row text-center">
