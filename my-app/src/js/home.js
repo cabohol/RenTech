@@ -30,6 +30,7 @@ async function loadAllLaptops() {
 
 // Function to display laptops
 function displayLaptops(laptops) {
+  
   let container = document.getElementById("cardsContainer");
   container.innerHTML = "";  // Clear the container before loading new data
 

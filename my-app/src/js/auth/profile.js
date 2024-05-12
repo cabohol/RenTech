@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             .single();
 
         if (userDetails) {
-            document.getElementById("first_name").textContent = userDetails.first_name;
-            document.getElementById("last_name").textContent = userDetails.last_name;
+            document.getElementById("first_name").textContent = userDetails.first_name + " " + userDetails.last_name;
             document.getElementById("contact_number").textContent = "Contact #: " + userDetails.contact_number;
             document.getElementById("college_name").textContent = "College: " + userDetails.college_name;
         }
