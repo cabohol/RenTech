@@ -66,7 +66,18 @@ function filterLaptops(keyword) {
 
 
 async function testFunction(index) {
-  const laptop = allLaptops[index]; // Accessing the global array allLaptops
+  let laptopsToUse = allLaptops; // By default, use all laptops
+
+  // Check if a search has been performed
+  const searchInput = document.querySelector('input[name="search"]');
+  if (searchInput) {
+    const keyword = searchInput.value.trim().toLowerCase();
+    laptopsToUse = allLaptops.filter(laptop => 
+      laptop.model.toLowerCase().includes(keyword)
+    );
+  }
+
+  const laptop = laptopsToUse[index]; // Accessing the filtered or all laptops based on search
   if (laptop) { // Make sure there's a laptop at this index
     localStorage.setItem("laptop_info", JSON.stringify(laptop));
     console.log(laptop);
@@ -76,6 +87,7 @@ async function testFunction(index) {
     console.error("No laptop found at index:", index);
   }
 }
+
 
 
 document.getElementById("cardsContainer").addEventListener("click", function(event) {

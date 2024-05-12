@@ -29,7 +29,7 @@ async function getDatas() {
                   <h3 class="card-title">${data.model}</h3>
                   <p class="card-text"></p>
                   <div class="d-flex justify-content-center align-items-center">
-                    <button class="text-white custom-btn view-button" data-index="${index}">View</button>
+                    <button class="text-white custom-btn view-button" data-id="${data.id}" data-index="${index}">View</button>
                   </div>
                 </div>
               </div>
@@ -58,6 +58,37 @@ getDatas(); // Tawagin ang getDatas nang mauna upang kunin agad ang mga data
 document.getElementById("cardsContainer").addEventListener("click", function(event) {
   if (event.target.classList.contains("view-button")) {
     const index = parseInt(event.target.dataset.index);
+  
+
+
     testFunction(index);
+    localStorage.setItem('index', index);
+   
+    console.log(index);
+<<<<<<< HEAD
+  }
+});
+
+document.addEventListener('click', function(event) {
+ 
+  if (event.target.classList.contains('view-button')) {
+   
+    const dataId = event.target.dataset.id;
+    localStorage.setItem('dataId', dataId);
+   
+    console.log('Data ID:', dataId);
+=======
+>>>>>>> 1c3119b623a8ac4f05a3b62407ffd9062d80a0c1
+  }
+});
+
+document.addEventListener('click', function(event) {
+ 
+  if (event.target.classList.contains('view-button')) {
+   
+    const dataId = event.target.dataset.id;
+    localStorage.setItem('dataId', dataId);
+   
+    console.log('Data ID:', dataId);
   }
 });

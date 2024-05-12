@@ -3,114 +3,235 @@ import { supabase } from "./name";
 const itemsImageUrl =
   "https://vlzwiqqexbsievtuzfgm.supabase.co/storage/v1/object/public/laptops/";
 
-// Fetch elements once the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-  let laptop_info = localStorage.getItem("laptop_info");
+const storedIndex = localStorage.getItem("index");
+const dataId = localStorage.getItem("dataId");
 
-  // Check if laptop_info exists and parse it
-  if (laptop_info) {
-    laptop_info = JSON.parse(laptop_info);
-    document.getElementById("model").value = laptop_info.model;
-    document.getElementById("price").value = laptop_info.price;
-    document.getElementById("specs").value = laptop_info.specs;
-    document.getElementById("condition").value = laptop_info.condition;
-    
+let update_laptops = "";
+const laptopDetails = async (dataId) => {
+  try {
+    console.log("Fetching laptop details for dataId:", dataId);
 
-    let imgElement = document.getElementById("image_path");
-    if (laptop_info.image_path) {
-        imgElement.src = itemsImageUrl + laptop_info.image_path;
-    } else {
-        imgElement.src = itemsImageUrl + laptop_info.image_path; // Specify a default image path if no image is available
-        imgElement.alt = "Not available";
+    const { data: Laptops, error } = await supabase
+      .from("laptops")
+      .select("*")
+      .eq("id", dataId);
+
+    let view_container = "";
+
+    Laptops.forEach((laptop) => {
+      view_container += `<div data-id="${
+        laptop.image_path
+<<<<<<< HEAD
+      }"><img class="block my-2 " src="${
+=======
+      }"><img class="block my-2 border border-light border-2 rounded-circle" src="${
+>>>>>>> 1c3119b623a8ac4f05a3b62407ffd9062d80a0c1
+        itemsImageUrl + laptop.image_path
+      }" width="100%" height="200rem"></div>
+   `;
+    });
+    document.getElementById("view_cont").innerHTML = view_container;
+
+    if (error) {
+      throw error;
     }
-   
 
+    if (Laptops && Laptops.length > 0) {
+      const laptop = Laptops[0];
 
+      update_laptops = laptop.id;
+
+      document.getElementById("model").value = laptop.model;
+      document.getElementById("price").value = laptop.price;
+      document.getElementById("specs").value = laptop.specs;
+      document.getElementById("condition").value = laptop.condition;
+
+      console.log("Laptop details fetched successfully:", laptop);
+    } else {
+      console.log("No laptop found with dataId:", dataId);
+    }
+  } catch (error) {
+    console.error("Error fetching laptop details:", error);
+    alert("Error fetching laptop details. Please try again later.");
   }
-});
+};
 
+laptopDetails(dataId);
 
-document
-  .getElementById("buttoncancel")
-  .addEventListener("click", async function (event) {
-    // Disable the button and change text to indicate loading
-    const deleteButton = document.getElementById("buttoncancel");
-    deleteButton.disabled = true;
-    deleteButton.textContent = 'Deleting...';
+form_add.onsubmit = async (e) => {
+  e.preventDefault();
 
-    let laptop_info = localStorage.getItem("laptop_info");
-    await deleteItem(JSON.parse(laptop_info).id);
+  const submitButton = document.querySelector("#form_add button[type='submit']");
+  submitButton.disabled = true;
+  submitButton.innerHTML = `<span>Loading...</span>`;
 
-    // Optionally re-enable the button and reset text if needed here
-    deleteButton.disabled = false;
-    deleteButton.textContent = 'Delete';
-  });
+  const formData = new FormData(form_add);
 
+  let image_path = formData.get("image_path");
+  let image_data = null;
 
-async function deleteItem(id) {
-  const { error } = await supabase.from("laptops").delete().eq("id", id);
-  window.location.pathname = "/overview1.html"; // Adjust the URL as needed
-}
-
-document
-  .getElementById("buttonsave")
-  .addEventListener("click", async function (event) {
-    const saveButton = document.getElementById("buttonsave");
-    saveButton.disabled = true;
-    saveButton.textContent = 'Saving...';
-
-    // Fetch updated values from the form
-    const model = document.getElementById("model").value;
-    const price = document.getElementById("price").value;
-    const specs = document.getElementById("specs").value;
-    const condition = document.getElementById("condition").value;
-    const image = document.getElementById("image_path");
-
-    // Upload image to Supabase storage
-    const { data: storageData, error: storageError } = await supabase.storage
-      .from('laptops')
-      .upload('public/' + image.name, image, {
+  if (!image_path) {
+    // Retrieve the last saved image path
+    // Assuming you have a variable holding the last saved image path
+    // Replace 'last_saved_image_path' with the variable holding the last saved image path
+    image_path = last_saved_image_path;
+  } else {
+    // Supabase Image Upload
+    const image = formData.get("image_path");
+    const { data, error } = await supabase.storage
+      .from("laptops")
+      .upload("laptops/" + image.name, image, {
         cacheControl: "3600",
         upsert: true,
       });
-
-    // Handle storage errors if any
-    if (storageError) {
-      console.error('Storage upload error:', storageError);
-      alert('Failed to upload image: ' + storageError.message);
-      saveButton.disabled = false;
-      saveButton.textContent = 'Save';
-      return;
+    if (error) {
+      console.error("Error uploading image:", error);
+    } else {
+      image_data = data;
     }
-
-    // Update item in Supabase with image path
-    const image_path = storageData.Key; // Assuming the image path is in storageData.Key
-    let laptop_info = localStorage.getItem("laptop_info");
-    if (laptop_info) {
-      laptop_info = JSON.parse(laptop_info);
-      await updateItem({...laptop_info, model, price, specs, condition, image_path});
-    }
-
-    saveButton.disabled = false;
-    saveButton.textContent = 'Save';
-  });
-
-async function updateItem(updatedItem) {
-  const { data, error } = await supabase
-    .from("laptops")
-    .update({
-      model: updatedItem.model, 
-      price: updatedItem.price, 
-      specs: updatedItem.specs, 
-      condition: updatedItem.condition, 
-      image_path: updatedItem.image_path
-    })
-    .eq("id", updatedItem.id)
-    .select();
-  if (error) {
-    console.error('Update error:', error);
-    alert('Failed to save changes: ' + error.message);
-  } else {
-    window.location.pathname = "/overview1.html"; // Adjust the URL as needed
+<<<<<<< HEAD
   }
-}
+
+  try {
+    if (!update_laptops) {
+      const { data, error } = await supabase
+        .from("laptops")
+        .insert([
+          {
+            model: formData.get("model"),
+            price: formData.get("price"),
+            specs: formData.get("specs"),
+            condition: formData.get("condition"),
+            image_path: image_data ? image_data.path : image_path,
+          },
+        ])
+        .single();
+      if (error) {
+        console.error("Error adding laptop:", error);
+      } else {
+        alert("Laptop successfully added!");
+      }
+    } else {
+      const { data, error } = await supabase
+        .from("laptops")
+        .update({
+          model: formData.get("model"),
+          price: formData.get("price"),
+          specs: formData.get("specs"),
+          condition: formData.get("condition"),
+          image_path: image_data ? image_data.path : image_path,
+        })
+        .eq("id", update_laptops)
+        .single();
+      if (error) {
+        console.error("Error updating laptop:", error);
+      } else {
+        alert("Laptop successfully updated!");
+        // Reset storage id
+        update_laptops = "";
+        /* reload datas */
+        window.location.href="home.html"
+      }
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+
+  form_add.reset();
+  submitButton.disabled = false;
+  submitButton.innerHTML = `Submit`;
+};
+
+document.getElementById("buttoncancel").addEventListener("click", async function (event) {
+  // Disable the button and change text to indicate loading
+  const deleteButton = document.getElementById("buttoncancel");
+  deleteButton.disabled = true;
+  deleteButton.textContent = 'Deleting...';
+
+  let laptop_info = localStorage.getItem("laptop_info");
+  await deleteItem(JSON.parse(laptop_info).id);
+
+  // Optionally re-enable the button and reset text if needed here
+  deleteButton.disabled = false;
+  deleteButton.textContent = 'Delete';
+});
+
+
+async function deleteItem(id) {
+  try {
+      // 1. Gipangita ang mga ratings nga naka-referencia sa laptop nga id
+      const { data: ratings, error } = await supabase.from("ratings").select().eq("laptop_id", id);
+      if (error) {
+          throw error;
+      }
+
+      // 2. I-delete ang mga ratings kaniadto
+      const deleteRatingsPromises = ratings.map(async (rating) => {
+          await supabase.from("ratings").delete().eq("id", rating.id);
+      });
+      await Promise.all(deleteRatingsPromises);
+
+      // 3. I-delete ang laptop
+      const { error: deleteError } = await supabase.from("laptops").delete().eq("id", id);
+      if (deleteError) {
+          throw deleteError;
+      }
+
+      // 4. I-redirekta ang user ngadto sa overview page
+      window.location.pathname = "/overview1.html"; // Ayaw kalimti nga i-adjust ang URL sunod sa imong kinahanglan
+  } catch (error) {
+      console.error("Error deleting item:", error);
+      // Handle error accordingly
+=======
+>>>>>>> 1c3119b623a8ac4f05a3b62407ffd9062d80a0c1
+  }
+
+  try {
+    if (!update_laptops) {
+      const { data, error } = await supabase
+        .from("laptops")
+        .insert([
+          {
+            model: formData.get("model"),
+            price: formData.get("price"),
+            specs: formData.get("specs"),
+            condition: formData.get("condition"),
+            image_path: image_data ? image_data.path : image_path,
+          },
+        ])
+        .single();
+      if (error) {
+        console.error("Error adding laptop:", error);
+      } else {
+        alert("Laptop successfully added!");
+      }
+    } else {
+      const { data, error } = await supabase
+        .from("laptops")
+        .update({
+          model: formData.get("model"),
+          price: formData.get("price"),
+          specs: formData.get("specs"),
+          condition: formData.get("condition"),
+          image_path: image_data ? image_data.path : image_path,
+        })
+        .eq("id", update_laptops)
+        .single();
+      if (error) {
+        console.error("Error updating laptop:", error);
+      } else {
+        alert("Laptop successfully updated!");
+        // Reset storage id
+        update_laptops = "";
+        /* reload datas */
+        window.location.href="home.html"
+      }
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+
+  form_add.reset();
+  submitButton.disabled = false;
+  submitButton.innerHTML = `Submit`;
+};

@@ -7,11 +7,11 @@ const itemsImageUrl =
   console.log("User ID:", userId); // Optional: Check the retrieved user ID in the console
   
 
-  const cancelBtn = document.getElementById("buttoncan");
-  cancelBtn.addEventListener("click", () => {
-    form_add.reset();
-  });
-  
+const cancelBtn = document.getElementById("buttoncan");
+cancelBtn.addEventListener("click", () => {
+  form_add.reset();
+});
+
 
 
   const form_add = document.getElementById("form_add");
