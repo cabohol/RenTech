@@ -65,20 +65,6 @@ document.getElementById("cardsContainer").addEventListener("click", function(eve
     localStorage.setItem('index', index);
    
     console.log(index);
-<<<<<<< HEAD
-  }
-});
-
-document.addEventListener('click', function(event) {
- 
-  if (event.target.classList.contains('view-button')) {
-   
-    const dataId = event.target.dataset.id;
-    localStorage.setItem('dataId', dataId);
-   
-    console.log('Data ID:', dataId);
-=======
->>>>>>> 1c3119b623a8ac4f05a3b62407ffd9062d80a0c1
   }
 });
 

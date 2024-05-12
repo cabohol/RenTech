@@ -21,11 +21,8 @@ const laptopDetails = async (dataId) => {
     Laptops.forEach((laptop) => {
       view_container += `<div data-id="${
         laptop.image_path
-<<<<<<< HEAD
-      }"><img class="block my-2 " src="${
-=======
-      }"><img class="block my-2 border border-light border-2 rounded-circle" src="${
->>>>>>> 1c3119b623a8ac4f05a3b62407ffd9062d80a0c1
+      }"><img class="d-block w-75 mx-auto"
+      src="${
         itemsImageUrl + laptop.image_path
       }" width="100%" height="200rem"></div>
    `;
@@ -89,7 +86,6 @@ form_add.onsubmit = async (e) => {
     } else {
       image_data = data;
     }
-<<<<<<< HEAD
   }
 
   try {
@@ -130,7 +126,7 @@ form_add.onsubmit = async (e) => {
         // Reset storage id
         update_laptops = "";
         /* reload datas */
-        window.location.href="home.html"
+        window.location.href="overview1.html"
       }
     }
   } catch (error) {
@@ -141,6 +137,7 @@ form_add.onsubmit = async (e) => {
   submitButton.disabled = false;
   submitButton.innerHTML = `Submit`;
 };
+
 
 document.getElementById("buttoncancel").addEventListener("click", async function (event) {
   // Disable the button and change text to indicate loading
@@ -182,56 +179,5 @@ async function deleteItem(id) {
   } catch (error) {
       console.error("Error deleting item:", error);
       // Handle error accordingly
-=======
->>>>>>> 1c3119b623a8ac4f05a3b62407ffd9062d80a0c1
   }
-
-  try {
-    if (!update_laptops) {
-      const { data, error } = await supabase
-        .from("laptops")
-        .insert([
-          {
-            model: formData.get("model"),
-            price: formData.get("price"),
-            specs: formData.get("specs"),
-            condition: formData.get("condition"),
-            image_path: image_data ? image_data.path : image_path,
-          },
-        ])
-        .single();
-      if (error) {
-        console.error("Error adding laptop:", error);
-      } else {
-        alert("Laptop successfully added!");
-      }
-    } else {
-      const { data, error } = await supabase
-        .from("laptops")
-        .update({
-          model: formData.get("model"),
-          price: formData.get("price"),
-          specs: formData.get("specs"),
-          condition: formData.get("condition"),
-          image_path: image_data ? image_data.path : image_path,
-        })
-        .eq("id", update_laptops)
-        .single();
-      if (error) {
-        console.error("Error updating laptop:", error);
-      } else {
-        alert("Laptop successfully updated!");
-        // Reset storage id
-        update_laptops = "";
-        /* reload datas */
-        window.location.href="home.html"
-      }
-    }
-  } catch (error) {
-    console.error("Error:", error);
-  }
-
-  form_add.reset();
-  submitButton.disabled = false;
-  submitButton.innerHTML = `Submit`;
-};
+}
